@@ -1,0 +1,4 @@
+  ingresar un numero
+  calcular si numero ingresado % 2
+  si el resultado es 0 es par
+  si el resultado no es 0 es impar
