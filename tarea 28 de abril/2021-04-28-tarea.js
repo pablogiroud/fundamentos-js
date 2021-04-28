@@ -1,6 +1,6 @@
 //Creamos dos variables: numero1, numero2
-let numero1 = 0;
-let numero2 = 0;
+let numero1 = 8;
+let numero2 = 12;
 
 //Mostramos por consola los resultados de las operaciones
 console.log('El resultado de las operaciones es:');
