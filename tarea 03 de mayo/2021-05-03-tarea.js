@@ -7,10 +7,7 @@ console.log(nombre.charAt(0).toUpperCase() + nombre.slice(1));
 
 // Tarea 2 - Ingresar 3 números
 //Solucion 1
-let arr1 = [8, 10, 86];
-var arr2 = new Array(1, 2, 3, 4)
-console.log(Math.max(arr1));
-console.log(Math.max(arr2));
+console.log(Math.max(8, 10, 86));
 
 //indicar cual es el mayor
 //Solucion 2
@@ -49,6 +46,10 @@ else
 }
 
 //indicar cual es el menor
+//Solucion1
+console.log(Math.min(8, 10, 86));
+
+//Solucion2
 let num4 = 1;
 let num5 = 2;
 let num6 = 3;
