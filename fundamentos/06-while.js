@@ -20,14 +20,14 @@ console.log(`Total = ${totalSuma} `);
 
 //-------------------------------
 
-let respuesta = 'HELSINKI';
+let respuesta = 'ROMA';
 let acierto = false;
 let contador = 0;
 let resp;
 
 while (contador < 3 && acierto === false){
  
-    let respUsuario = prompt('Capital de Finlandia');
+    let respUsuario = prompt(`Capital de Italia? tenes ${3 - contador} intentos`);
 
     if (respUsuario === null){
         document.write('Decidiste no contestar cagon!');
