@@ -5,7 +5,7 @@
 
 //mientras condicion
 //    entonces accion
-
+/*
 let vecesSumar = 10;
 let totalSuma = 0;
 
@@ -16,27 +16,36 @@ while(vecesSumar>0){
 }
 
 console.log(`Total = ${totalSuma} `);
-
+*/
 
 //-------------------------------
 
 let respuesta = 'HELSINKI';
 let acierto = false;
-let contador = 0
+let contador = 0;
+let resp;
 
 while (contador < 3 && acierto === false){
  
-    let respUsuario = prompt('Capital de Finlandia')
+    let respUsuario = prompt('Capital de Finlandia');
 
-    if (respUsuario.toUpperCase() === respuesta){
+    if (respUsuario === null){
+        document.write('Decidiste no contestar cagon!');
+        resp = 'cancelar';
+        break;
+    }
+    else if (respUsuario.toUpperCase() === ''){
+        console.log('Vacio no sirve mamadera!')
+    }
+    else if (respUsuario.toUpperCase() === respuesta){
         acierto = true;
         console.log('Respuesta correcta!')
-    }
+        }
 
     contador++
 
 }
 
-if (acierto === false) {
-    document.write('Lo sentimos, no pegaste ni una!')
+if (acierto === false && resp != 'cancelar') {
+    document.write('Lo siento, no pegaste ni una!')
 }
