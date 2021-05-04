@@ -27,7 +27,7 @@ let resp;
 
 while (contador < 3 && acierto === false){
  
-    let respUsuario = prompt(`Capital de Italia? tenes ${3 - contador} intentos`);
+    let respUsuario = prompt(`Capital de Italia?\n\nTenes ${3 - contador} intentos`);
 
     if (respUsuario === null){
         document.write('Decidiste no contestar cagon!');
