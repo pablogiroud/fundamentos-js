@@ -8,9 +8,13 @@ let arreglo = [];
 while (arreglo){
     let texto = prompt('ingrese un texto');
     if (texto === null){
-        console.log(arreglo.join('-'))
-        break;
-    }
+            console.log(arreglo.join('-'));
+            break;
+        }
+    else if(texto === ''){
+            console.log('Tenes que ingresar algo!')
+            continue;
+        }
     else{
         arreglo.push(texto);
     }
