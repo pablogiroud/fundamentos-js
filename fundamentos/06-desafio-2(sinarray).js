@@ -1,8 +1,9 @@
-let arreglo = [];
-let total = '';
+//revisar while y enfocar en no utilizar el arreglo.
 
-while (arreglo != null){
-    let numero = prompt('ingrese un numero');
+let numero = prompt('ingrese un numero');
+let total = 0;
+
+while (numero != null){
     if (isNaN(numero) || numero === ''){
         alert('Chango tiene que ser un numero');
     }
@@ -11,10 +12,8 @@ while (arreglo != null){
             break;
         }
     else {
-    arreglo.push(numero);
+        numero = parseFloat(numero);
+        total = total+numero;
     }
-}
-for(let i=0; i<arreglo.length; i++){
-    total = arreglo.reduce((a, n) => (a + Number(n)), 0);
 }
 console.log(`Este es el resultado: ${total}`);
