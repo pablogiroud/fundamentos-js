@@ -38,3 +38,18 @@ console.log(alumnos.includes('Laura'))
 let pos=1
 alumnos.splice(pos, 1)
 
+//Eliminar varios elementos a partir de una posicion
+let alumnosEliminados = alumnos.splice(0,3)
+
+//reemplazar valores
+alumnos.splice(0, 2, 'Daniel', 'Augusto');
+
+//Concatenar dos array
+let comision = alumnas.concat(alumnos);
+
+//orden alfabetico
+school.sort()
+
+//invertir el orden
+school.sort()
+
