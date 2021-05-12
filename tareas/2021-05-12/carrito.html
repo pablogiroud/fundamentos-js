@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <title>Carrito</title>
+</head>
+<body>
+    <div class="space">
+        <button type="button" class="btn btn-primary" onClick="agregarProductos()">Ingrese productos al carrito</button>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Carrito</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Los articulos seleccionados son:</h6>
+              <textarea id="display" style="width:200px;height:200px"></textarea>
+            </div>
+          </div>
+    </div>
+    <script>
+        function agregarProductos(){
+            let prod = [];            
+            while(prod){
+                let elec = prompt('Ingrese un producto');
+                if (isNaN(elec) || elec === ''){
+                    alert('respeta la consigna mamadera!');
+                }else if (elec === null){
+                    console.log('Gracias! vuelva prontos');
+                    break;
+                }else {
+                    prod.push(elec);
+                    console.log(prod)
+                }
+            }
+            document.getElementById("display").innerHTML = agregarProductos();
+            //$("#display").val(prod);
+        }
+    </script>
+    <!--<script src="2021-05-12.js"></script>-->
+</body>
+</html>
