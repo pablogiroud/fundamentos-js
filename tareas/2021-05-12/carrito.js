@@ -2,13 +2,13 @@ let total = [];
 let opcion = prompt('Seleccione una opcion\n1. Agregar producto al carrito\n2. Listar los productos del carrito\n3. Buscar un producto en el carrito\n4. Eliminar producto del carrito');
 
 //funcion agregar productos al carritoalert('Carrito');
-const agregarProductos = function(){ 
+function agregarProductos(){ 
     let carrito = [];
     while (carrito){
         let agregar = prompt('Ingrese el producto');
         if(agregar === null){
-            alert('La carga del carrito se ha cancelado')
-            break;
+            alert('La carga del carrito se ha cancelado');
+            return carrito;
         }else if(agregar === ''){
             alert('No se admiten campos vacios');
         }
@@ -28,13 +28,17 @@ function listarProductos(){
     }
 }
 
+
+//Buscar un producto en el carrito
+//Eliminar producto del carrito
+
 //funcion menu
 function menu(opcion){
     switch(opcion){
         case '1':
             //agregarProductos();
-            total = total.concat(agregarProductos()); 
-            break;
+            total.concat(agregarProductos());
+            return;
         case '2':
             listarProductos();
             break;
@@ -50,9 +54,7 @@ function menu(opcion){
     }
 }
 
-//Buscar un producto en el carrito
-//Eliminar producto del carrito
-
+//menu
 while(opcion != null){
     menu(opcion);
 }
