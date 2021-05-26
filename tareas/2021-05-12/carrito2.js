@@ -41,13 +41,13 @@ let consulta = prompt('Desea seguir ingresando productos?\nIngrese la letra s pa
 */
 function crearCarrito(){
     let compra = [];
-    while(compra){
+    while(carrito){
         let producto = prompt('Ingrese un producto');
         if(producto === null){
-            alert('La operacion ha sido cancelada');
-            break;
+            console.log('La operacion ha sido cancelada');
+            return;
         }else if (producto === ''){
-            alert('No se puede ingresar espacios vacios');
+            console.log('No se puede ingresar espacios vacios');
             break;
         }else{
             compra.push(producto);
@@ -55,7 +55,7 @@ function crearCarrito(){
         }
     }
     carrito = carrito.concat(compra);
-    exce();
+    //exce();
     return;
 }
 
@@ -96,7 +96,7 @@ function buscarProducto() {
         }
     }
     alert('Indique si desea realizar alguna otra tarea');
-    menu();
+    //menu();
 }
 
 //funcion menu
